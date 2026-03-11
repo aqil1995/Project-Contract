@@ -1,0 +1,13 @@
+import qrcode
+
+def create_qr(text, filename="my_qr.png"):
+    qr = qrcode.QRCode(version=1, box_size=10, border=5)
+    qr.add_data(text)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+    img.save(filename)
+    print(f"QR code saved as {filename}")
+
+# Examples
+create_qr("https://github.com/IAMAQIL95", "my_github_qr.png")
+create_qr("https://wa.me/919876543210", "whatsapp_qr.png")
