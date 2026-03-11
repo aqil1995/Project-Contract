@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0f0f1a;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 { margin: 60px 0 40px; }
+
+.btn {
+  padding: 15px 35px;
+  margin: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.neon {
+  background: #000;
+  color: #0ff;
+  box-shadow: 0 0 20px #0ff, inset 0 0 10px #0ff;
+}
+
+.neon:hover { box-shadow: 0 0 40px #0ff, inset 0 0 20px #0ff; }
+
+.bounce:hover {
+  animation: bounce 0.6s;
+  background: #e91e63;
+  color: white;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.gradient {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+}
+
+.gradient:hover {
+  background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+  transform: scale(1.1);
+}
